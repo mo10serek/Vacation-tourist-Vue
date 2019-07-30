@@ -1,0 +1,30 @@
+<!DOCTYPE HTHL>
+
+<html>
+    <head>
+        <!--<script src="vue/Vue.js"></script>-->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+        
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="List" class="List">
+            <h1>List of Places</h1>
+            <li v-for="place in places">{{ place }}</li>
+        </div>
+        
+        <div id="app">
+            <h3 class="Cart">Cart({{cart}})</h3>
+            <Location id="Location" :selectedlocation="0" style="top: 300px;" @update-cart="updateCart">a</Location>
+            <Location id="Location" :selectedlocation="1" style="top: 900px;" @update-cart="updateCart"></Location>
+            <Location id="Location" :selectedlocation="2" style="top: 1500px;" @update-cart="updateCart"></Location>
+            <Location id="Location" :selectedlocation="3" style="top: 2100px;" @update-cart="updateCart"></Location>
+        </div>
+        
+        <div id="review">
+            <location-review></location-review>
+        </div>
+        
+        <script src="vue/view.js"></script>
+    </body>
+</html>
